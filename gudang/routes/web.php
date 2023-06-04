@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/register', 'App\Http\Controllers\AuthController@register');
 Route::post('/postregister', 'App\Http\Controllers\AuthController@postregister');
 Route::post('/postlogin', 'App\Http\Controllers\AuthController@postlogin');
+Route::get('/logout','App\Http\Controllers\AuthController@logout');
 
 
 //staf

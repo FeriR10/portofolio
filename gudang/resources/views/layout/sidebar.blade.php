@@ -19,16 +19,14 @@
 
           @if( auth()->user()->role == 'staf' )
           <li class="nav-item">
-            <a href="/konsumen" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="/homebarang" class="nav-link">
               <p>
-                DASHBOARD 
+                 STOK BARANG
               </p>
             </a>
           </li>
           <li class="nav-item">  
-            <a href="/pendataan" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+            <a href="/homebarang" class="nav-link">
               <p>
                 Pendataan 
               </p>
@@ -38,7 +36,6 @@
           @endif
           <li class="nav-item">  
             <a href="/barang_masuk" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
               <p>
                 Barang Masuk 
               </p>
@@ -46,7 +43,6 @@
           </li>
           <li class="nav-item">  
             <a href="/barang_keluar" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
               <p>
                 Barang Keluar 
               </p>
@@ -55,7 +51,6 @@
           @if( auth()->user()->role == 'admin' )
           <li class="nav-item">
             <a href="/homebarang" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Barang 
               </p>
@@ -72,7 +67,6 @@
           </li> -->
           <li class="nav-item">
             <a href="/homesuplier" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Suplier 
               </p>
@@ -80,7 +74,6 @@
           </li>
            <li class="nav-item">
             <a href="/newsuplier" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                Tambah Suplier 
               </p>
