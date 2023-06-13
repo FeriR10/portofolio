@@ -16,7 +16,6 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
     <!-- Main content -->
     <section class="content">
 
@@ -30,11 +29,14 @@
             <h4 class="message-head">{{ session('sukses') }}</h4> 
           </div>
           @endif
+         <a href="{{url('download-barang-pdf')}}" target="_blank">
+          <button class="btn btn-success">Download PDF</button>
+         </a>
           <div class="card-tools">
             <a href="/newbarang" class="btn btn-info">Tambah Barang</a>
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
             <i class="fas fa-minus"></i></button>
-          </div>
+          </div> 
         </div>
         <div class="card-body">
           <table id="example1" class="table table-bordered table-striped">

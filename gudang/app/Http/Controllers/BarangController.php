@@ -8,6 +8,7 @@ use \App\Models\User;
 use \App\Models\Barang;
 use \App\Models\Barang_masuk;
 use \App\Models\Barang_keluar;
+use PDF;
 
 class BarangController extends Controller
 {
@@ -54,5 +55,11 @@ class BarangController extends Controller
         $data->delete();
 
         return redirect('/homebarang')->with('sukses','Data berhasil dihapus');
+    }
+    public function downloadpdf()
+    {
+        $data_barang = Barang::all();
+        $pdf = PDF::loadView('admin.dashboard-pdf',['data_barang'=>$data_barang]); 
+        return $pdf->stream();
     }
 }
