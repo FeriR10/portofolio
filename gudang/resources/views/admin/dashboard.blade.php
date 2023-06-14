@@ -29,7 +29,7 @@
             <h4 class="message-head">{{ session('sukses') }}</h4> 
           </div>
           @endif
-         <a href="{{url('download-barang-pdf')}}" target="_blank">
+         <a href="/download-barang-pdf">
           <button class="btn btn-success">Download PDF</button>
          </a>
           <div class="card-tools">

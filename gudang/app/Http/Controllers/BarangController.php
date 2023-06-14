@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use Auth;
+use Carbon\Carbon;
 use \App\Models\User;
 use \App\Models\Barang;
+use Illuminate\Http\Request;
 use \App\Models\Barang_masuk;
 use \App\Models\Barang_keluar;
-use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class BarangController extends Controller
 {
@@ -59,7 +62,7 @@ class BarangController extends Controller
     public function downloadpdf()
     {
         $data_barang = Barang::all();
-        $pdf = PDF::loadView('admin.dashboard-pdf',['data_barang'=>$data_barang]); 
-        return $pdf->stream();
+        $pdf = Pdf::loadView('admin.dashboard-pdf',['data_barang'=>$data_barang]); 
+        return $pdf->download('admin.dashboard-'.Carbon::now()->timestamp.'.pdf');
     }
 }

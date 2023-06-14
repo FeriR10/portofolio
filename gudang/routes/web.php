@@ -56,3 +56,4 @@ Route::get('/barang/{id}/delete', 'App\Http\Controllers\BarangController@delete'
     Route::get('/barang_keluar/{id}/tambah', 'App\Http\Controllers\BarangkeluarController@tambah');
     Route::post('/barang_keluar/{id}/simpan', 'App\Http\Controllers\BarangkeluarController@simpan');
     Route::get('/barang_keluar{id}/delete', 'App\Http\Controllers\BarangkeluarController@delete');
+
